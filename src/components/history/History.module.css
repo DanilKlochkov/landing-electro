@@ -1,5 +1,5 @@
 .container {
-    padding-top: calc(rem(56px) + rem(30px));
+    padding-top: calc(rem(80px) + var(--mantine-spacing-md));
     display: flex;
     align-items: center;
 }
@@ -27,6 +27,16 @@
     line-height: 1.2 !important;
     font-size: rem(32px) !important;
     margin-top: var(--mantine-spacing-xs) !important;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        font-weight: 800 !important;
+        font-size: rem(25px) !important;
+    }
+
+    @media (max-width: $mantine-breakpoint-md) {
+        font-weight: 800 !important;
+        font-size: rem(22px) !important;
+    }
 }
 
 .category {

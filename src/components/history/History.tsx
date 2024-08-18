@@ -67,7 +67,7 @@ export function CardsCarousel() {
         <Container id={"history"} size="lg" className={classes.container} mih={'100vh'}>
             <Box className={classes.inner}>
                 <Grid columns={12} gutter={"xl"}>
-                    <Grid.Col span={{base: 12, md: 6, lg: 5}}>
+                    <Grid.Col span={{base: 12, xs: 6, lg: 5}}>
                         <Carousel
                             plugins={[autoplay.current]}
                             withIndicators
@@ -81,7 +81,7 @@ export function CardsCarousel() {
                             {slides}
                         </Carousel>
                     </Grid.Col>
-                    <Grid.Col span={{base: 12, sm: 6, lg: 7}}>
+                    <Grid.Col span={{base: 12, xs: 6, lg: 7}}>
                         <Timeline
                             active={3}
                             bulletSize={24}

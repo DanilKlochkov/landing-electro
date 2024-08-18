@@ -119,7 +119,6 @@ export function FooterCentered() {
             key={link.label}
             href={link.link}
             lh={1}
-            onClick={(event) => event.preventDefault()}
             size="sm"
         >
             {link.label}

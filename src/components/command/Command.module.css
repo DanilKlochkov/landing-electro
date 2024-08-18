@@ -1,0 +1,28 @@
+.container {
+    padding-top: calc(rem(80px) + var(--mantine-spacing-lg));
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--mantine-color-body);
+}
+
+.avatar {
+    border: rem(2px) solid var(--mantine-color-body);
+}
+
+.icon {
+    color: light-dark(var(--mantine-color-gray-5), var(--mantine-color-dark-3));
+}
+
+.name {
+    font-family:
+            Greycliff CF,
+            var(--mantine-font-family);
+}
+
+.title {
+    font-weight: 900 !important;
+    font-size: rem(32px) !important;
+}
