@@ -1,0 +1,163 @@
+.wrapper {
+    padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+    padding-top: calc(rem(80px) + var(--mantine-spacing-md));
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+    }
+}
+
+.header {
+    height: rem(400px);
+    padding-top: var(--mantine-spacing-md);
+    background-color: #C4DEFD;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: space-between;
+    position: relative;
+    padding: calc(var(--mantine-spacing-xl) * 1.5) calc(var(--mantine-spacing-xl) * 2);
+    border-radius: var(--mantine-radius-lg);
+    margin-bottom: var(--mantine-spacing-lg);
+
+    @media (max-width: em(1080px)) {
+        height: auto;
+        flex-direction: column-reverse;
+        align-items: initial;
+        padding: var(--mantine-spacing-xl);
+    }
+}
+
+.title {
+    color: var(--mantine-color-white) !important;
+    position: relative !important;
+    z-index: 1 !important;
+    font-size: rem(46px) !important;
+    font-weight: 800 !important;
+    letter-spacing: rem(-0.5px) !important;
+    font-family: Greycliff CF,
+    var(--mantine-font-family) !important;
+
+    @media (max-width: em(1080px)) {
+        font-size: rem(22px) !important;
+        text-align: center !important;
+        margin-top: var(--mantine-spacing-xl) !important;
+    }
+}
+
+.titleOverlay {
+    z-index: 0 !important;
+    /*position: absolute !important;*/
+    color: var(--mantine-color-blue-5) !important;
+    font-weight: 900 !important;
+    opacity: 0.1 !important;
+    font-size: rem(170px) !important;
+    line-height: 1 !important;
+    top: rem(10px) !important;
+    left: rem(45px) !important;
+    pointer-events: none !important;
+    font-family: Greycliff CF,
+    var(--mantine-font-family) !important;
+
+    @media (max-width: em(1080px)) {
+        display: none !important;
+    }
+}
+
+.contact {
+    padding: calc(var(--mantine-spacing-xl) * 1.5) !important;
+    background-color: var(--mantine-color-white) !important;
+    border-radius: var(--mantine-radius-lg) !important;
+    box-shadow: var(--mantine-shadow-md) !important;
+    align-self: center !important;
+
+    @media (max-width: em(1080px)) {
+        padding: var(--mantine-spacing-xl);
+    }
+}
+
+.contactTitle {
+    color: var(--mantine-color-black) !important;
+    margin-bottom: var(--mantine-spacing-xl) !important;
+    line-height: 1 !important;
+}
+
+.categoryCard {
+    height: rem(160px);
+    position: relative;
+    background-size: 100%;
+    background-position: center;
+    color: var(--mantine-color-white);
+    border-radius: var(--mantine-radius-lg);
+    padding: var(--mantine-spacing-xl);
+    overflow: hidden;
+    transition: background-size 300ms ease;
+
+    @mixin hover {
+        background-size: 105%;
+    }
+}
+
+.categoryLabel {
+    color: var(--mantine-color-white);
+    z-index: 2;
+    position: relative;
+}
+
+.wrapper2 {
+    display: flex !important;
+    align-items: center !important;
+    color: var(--mantine-color-white) !important;
+}
+
+.icon2 {
+    margin-right: var(--mantine-spacing-md) !important;
+    background-image: linear-gradient(
+            135deg,
+            var(--mantine-color-blue-4) 0%,
+            var(--mantine-color-blue-6) 100%
+    ) !important;
+}
+
+.title2 {
+    color: var(--mantine-color-gray-6) !important;
+}
+
+.description2 {
+    color: var(--mantine-color-black) !important;
+}
+
+.footer {
+    background-color: #043873;
+    position: relative;
+    /*margin-top: rem(120px);*/
+    border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+}
+
+.titleFooter {
+    color: var(--mantine-color-white) !important;
+    font-weight: 500 !important;
+    font-size: rem(15px) !important;
+    text-transform: uppercase !important;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--mantine-spacing-md) var(--mantine-spacing-md);
+
+    @media (max-width: $mantine-breakpoint-sm) {
+        flex-direction: column;
+    }
+}
+
+.links {
+    @media (max-width: $mantine-breakpoint-sm) {
+        margin-top: var(--mantine-spacing-lg);
+        margin-bottom: var(--mantine-spacing-sm);
+    }
+}
+
+.link {
+    color: var(--mantine-color-white) !important;
+}

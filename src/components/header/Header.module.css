@@ -1,0 +1,41 @@
+.header {
+    height: rem(60px);
+    width: 100%;
+    background-color: #043873;
+    position: fixed;
+    z-index: 100;
+}
+
+.inner {
+    height: rem(56px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: var(--mantine-color-white) !important;
+    font-weight: 500 !important;
+    font-size: rem(20px) !important;
+    text-transform: uppercase !important;
+}
+
+.link {
+    display: block;
+    line-height: 1;
+    padding: rem(8px) rem(12px);
+    border-radius: var(--mantine-radius-sm) ;
+    text-decoration: none;
+    color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-0));
+    font-size: var(--mantine-font-size-sm);
+    font-weight: 500;
+
+    @mixin hover {
+        color: var(--mantine-color-gray-7);
+        background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    }
+}
+
+.linkLabel {
+    margin-right: rem(5px);
+}
