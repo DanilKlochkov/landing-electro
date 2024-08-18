@@ -9,6 +9,8 @@ import {
     IconSun
 } from "@tabler/icons-react";
 
+import logoUrl from '/Logo.svg?url';
+
 export function FaqWithHeader() {
     return (
         <div>
@@ -128,7 +130,7 @@ export function FooterCentered() {
         <div className={classes.footer}>
             <Container className={classes.inner} size="lg">
                 <Flex gap={10} align={"center"}>
-                    <Image src={"/Logo.svg"} h={28}/>
+                    <Image src={logoUrl} h={28}/>
                     <Title className={classes.titleFooter}>Энергозаряд</Title>
                 </Flex>
 

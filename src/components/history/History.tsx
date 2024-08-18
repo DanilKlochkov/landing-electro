@@ -5,6 +5,10 @@ import {IconGitBranch, IconGitCommit, IconGitPullRequest, IconMessageDots} from 
 import {useRef} from "react";
 import Autoplay from "embla-carousel-autoplay";
 
+import carbonUrl from '/Carbonization.png?url';
+import chemistryUrl from '/SoftChemistry.png?url';
+import electroChemistryUrl from '/ElectroChemistry.png?url';
+
 interface CardProps {
     image: string;
     title: string;
@@ -34,20 +38,17 @@ function Card({image, title, category}: CardProps) {
 
 const data = [
     {
-        image:
-            '/SoftChemistry.png',
+        image: chemistryUrl,
         title: 'Внедрение методов "мягкой химии" для управления характеристиками материалов',
         category: 'наука',
     },
     {
-        image:
-            '/Carbonization.png',
+        image: carbonUrl,
         title: 'Карбонизация и активация материалов в контроллируемой атмосфере',
         category: 'химия',
     },
     {
-        image:
-            '/ElectroChemistry.png',
+        image: electroChemistryUrl,
         title: 'Электрохимическое тестирование материалов для оптимизации технологий синтеза',
         category: 'химия',
     },

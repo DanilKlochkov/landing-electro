@@ -2,6 +2,8 @@ import {Group, Burger, Container, Image, Flex, Title} from '@mantine/core';
 import {useDisclosure} from '@mantine/hooks';
 import classes from './Header.module.css';
 
+import logoUrl from '/Logo.svg?url';
+
 const links = [
     {link: '#about', label: 'Проект'},
     {link: '#history', label: 'История'},
@@ -29,7 +31,7 @@ export function Header() {
                 <div className={classes.inner}>
                     {/*<MantineLogo size={28} />*/}
                     <Flex gap={10} align={"center"}>
-                        <Image src={"/Logo.svg"} h={28}/>
+                        <Image src={logoUrl} h={28}/>
                         <Title className={classes.title}>Энергозаряд</Title>
                     </Flex>
                     <Group gap={5} visibleFrom="sm">
