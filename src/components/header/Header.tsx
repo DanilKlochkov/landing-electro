@@ -1,4 +1,4 @@
-import {Group, Burger, Container, Image, Flex, NavLink, Title} from '@mantine/core';
+import {Group, Burger, Container, Image, Flex, Title} from '@mantine/core';
 import {useDisclosure} from '@mantine/hooks';
 import classes from './Header.module.css';
 
