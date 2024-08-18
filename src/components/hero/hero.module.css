@@ -1,5 +1,7 @@
 .hero {
     position: relative;
+    display: flex;
+    align-items: center;
     height: 100%;
     width: 100%;
     background-image: url('/Cover.png');
@@ -11,14 +13,13 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-bottom: calc(var(--mantine-spacing-xl) * 6);
+    justify-content: center;
+    align-items: center;
     z-index: 1;
     position: relative;
 
     @media (max-width: $mantine-breakpoint-sm) {
-        height: rem(500px);
+        height: rem(700px);
         padding-bottom: calc(var(--mantine-spacing-xl) * 3);
     }
 }

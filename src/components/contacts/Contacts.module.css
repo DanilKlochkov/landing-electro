@@ -134,7 +134,7 @@
 }
 
 .titleFooter {
-    color: var(--mantine-color-white) !important;
+    color: #ADD0FF !important;
     font-weight: 500 !important;
     font-size: rem(15px) !important;
     text-transform: uppercase !important;
@@ -159,5 +159,5 @@
 }
 
 .link {
-    color: var(--mantine-color-white) !important;
+    color: #ADD0FF !important;
 }

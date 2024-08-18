@@ -15,11 +15,15 @@ import {
 import classes from './Command.module.css';
 import {useDisclosure, useMediaQuery} from "@mantine/hooks";
 
-import ceoUrl from '/CEO.png?url';
+import ceoUrl from '/CEO.jpg?url';
+import gorshkov from '/gorshkov.png?url';
+import klochkov from '/Klochkov.png?url';
+import zotov from '/Zotov.png?url';
+import asmolova from '/Asmolova.png?url';
 
 export function Command() {
     const theme = useMantineTheme()
-    const matches = useMediaQuery(`(min-width: ${theme.breakpoints.sm})`);
+    const matches = useMediaQuery(`(min-width: ${theme.breakpoints.md})`);
     const [opened, {open, close}] = useDisclosure(false);
 
     return (
@@ -50,54 +54,43 @@ export function Command() {
                     </List.Item>
                 </List>
             </Modal>
-            <Grid columns={12} gutter={"xl"}>
-                {matches && <Grid.Col span={{base: 8, sm: 5, md: 4}}>
-                    <Card padding="xl" radius="md" className={classes.card}>
+            <Grid columns={12} align="center">
+                <Grid.Col span={12}>
+                    <Title className={classes.title}>Наша команда</Title>
+                </Grid.Col>
+                <Grid.Col span={12}>
+                    Победители профильных конкурсов, активные участники научных исследований
+                </Grid.Col>
+                {matches && <Grid.Col span={{base: 8, md: 5}}>
+                    <Card padding="xl" className={classes.card}>
                         <Card.Section
-                            h={250}
+                            h={300}
                             style={{
                                 backgroundImage: `url(${ceoUrl})`,
                                 backgroundSize: 'cover',
+                                borderRadius: 'var(--mantine-radius-md)'
                             }}
                         />
-                        <Text ta="center" fz="lg" fw={500} mt="sm">
-                            Денис Железнов
-                        </Text>
-                        <Text ta="center" fz="sm" c="dimmed">
-                            Руководитель проекта, Генеральный директор ООО "Энергозаряд"
-                        </Text>
-                        <Button fullWidth radius="md" mt="xl" size="md" variant="default" onClick={open}>
-                            Подробнее
-                        </Button>
                     </Card>
                 </Grid.Col>}
-                <Grid.Col span={{base: 12, sm: 7, md: 8}}>
-                    <Grid columns={4} gutter={!matches ? "xl" : "md"}>
-                        <Grid.Col span={4}>
-                            <Title className={classes.title}>Наша команда</Title>
-                        </Grid.Col>
-                        <Grid.Col span={4}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </Grid.Col>
-                        {!matches && <Grid.Col span={{base: 4}}>
+                <Grid.Col span={{base: 12, md: 7}}>
+                    <Grid columns={4} gutter={!matches ? "xl" : "md"} justify={"center"}>
+                        {!matches && <Grid.Col span={{base: 4, sm: 3}}>
                             <Card padding="xl" radius="md" className={classes.card}>
                                 <Card.Section
                                     h={250}
                                     style={{
                                         backgroundImage:
-                                            'url(CEO.png)',
+                                            'url(CEO.jpg)',
                                         backgroundSize: 'cover',
                                     }}
                                 />
-                                <Text ta="center" fz="lg" fw={500} mt="sm">
-                                    Денис Железнов
-                                </Text>
-                                <Text ta="center" fz="sm" c="dimmed">
+                                <Text fz="xs" tt="uppercase" fw={700} c="dimmed">
                                     Руководитель проекта, Генеральный директор ООО "Энергозаряд"
+                                </Text>
+
+                                <Text fz="lg" fw={500} className={classes.name}>
+                                    Железнов Денис Ильич
                                 </Text>
                                 <Button fullWidth radius="md" mt="xl" size="md" variant="default" onClick={open}>
                                     Подробнее
@@ -105,40 +98,73 @@ export function Command() {
                             </Card>
                         </Grid.Col>}
                         <Grid.Col span={{base: 4, xs: 2}}>
-                            <UserInfoIcons/>
+                            <UserInfoIcons
+                                role={"научный руководитель"}
+                                name={"Горшков Н.В."}
+                                imageLink={gorshkov}
+                            />
                         </Grid.Col>
                         <Grid.Col span={{base: 4, xs: 2}}>
-                            <UserInfoIcons/>
+                            <UserInfoIcons
+                                role={"разработчик"}
+                                name={"Клочков Д.С."}
+                                imageLink={klochkov}
+                            />
                         </Grid.Col>
                         <Grid.Col span={{base: 4, xs: 2}}>
-                            <UserInfoIcons/>
+                            <UserInfoIcons
+                                role={"инженер"}
+                                name={"Зотов И.В."}
+                                imageLink={zotov}
+                            />
                         </Grid.Col>
                         <Grid.Col span={{base: 4, xs: 2}}>
-                            <UserInfoIcons/>
+                            <UserInfoIcons
+                                role={"инженер"}
+                                name={"Асмолова А.А."}
+                                imageLink={asmolova}
+                            />
                         </Grid.Col>
                     </Grid>
                 </Grid.Col>
+                {matches && <Grid.Col span={{base: 8, sm: 5, md: 5}}>
+                    <Text fz="xs" tt="uppercase" fw={700} c="dimmed" ta="center">
+                        Руководитель проекта, Генеральный директор ООО "Энергозаряд"
+                    </Text>
+
+                    <Text fz="lg" fw={500} className={classes.name} ta="center">
+                        Железнов Денис Ильич
+                    </Text>
+                    <Button fullWidth radius="md" mt="md" size="md" variant="default" onClick={open}>
+                        Подробнее
+                    </Button>
+                </Grid.Col>}
             </Grid>
         </Container>
     );
 }
 
-export function UserInfoIcons() {
+
+export function UserInfoIcons({name, role, imageLink}: {
+    name: string;
+    role: string;
+    imageLink: string;
+}) {
     return (
-        <div>
+        <Card withBorder>
             <Group wrap="nowrap">
                 <Avatar
-                    src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png"
+                    src={imageLink}
                     size={94}
                     radius="md"
                 />
                 <div>
                     <Text fz="xs" tt="uppercase" fw={700} c="dimmed">
-                        инженер
+                        {role}
                     </Text>
 
                     <Text fz="lg" fw={500} className={classes.name}>
-                        Рабочий Работник
+                        {name}
                     </Text>
 
                     <Group wrap="nowrap" gap={10} mt={5}>
@@ -146,6 +172,6 @@ export function UserInfoIcons() {
                     </Group>
                 </div>
             </Group>
-        </div>
+        </Card>
     );
 }

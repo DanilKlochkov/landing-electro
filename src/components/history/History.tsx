@@ -1,7 +1,6 @@
 import {Carousel} from '@mantine/carousel';
-import {Paper, Text, Title, Container, Grid, Timeline, Box} from '@mantine/core';
+import {Paper, Text, Title, Container, Grid, Timeline, Box, Overlay} from '@mantine/core';
 import classes from './History.module.css';
-import {IconGitBranch, IconGitCommit, IconGitPullRequest, IconMessageDots} from "@tabler/icons-react";
 import {useRef} from "react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -12,27 +11,30 @@ import electroChemistryUrl from '/ElectroChemistry.png?url';
 interface CardProps {
     image: string;
     title: string;
-    category: string;
 }
 
-function Card({image, title, category}: CardProps) {
+function Card({image, title}: CardProps) {
     return (
-        <Paper
-            shadow="md"
-            p="xl"
-            radius="md"
-            style={{backgroundImage: `url(${image})`}}
-            className={classes.card}
-        >
-            <div>
-                <Text className={`${classes.category} noselect`} size="xs">
-                    {category}
-                </Text>
-                <Title order={3} className={classes.title}>
-                    {title}
-                </Title>
-            </div>
-        </Paper>
+        <>
+            <Overlay
+                gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .1) 100%)"
+                opacity={1}
+                zIndex={1}
+            />
+            <Paper
+                shadow="md"
+                p="xl"
+                radius="md"
+                style={{backgroundImage: `url(${image})`}}
+                className={classes.card}
+            >
+                <div className={classes.innerCard}>
+                    <Title order={3} className={classes.title}>
+                        {title}
+                    </Title>
+                </div>
+            </Paper>
+        </>
     );
 }
 
@@ -84,17 +86,17 @@ export function CardsCarousel() {
                     <Grid.Col span={{base: 12, xs: 6, lg: 7}}>
                         <Timeline
                             active={3}
-                            bulletSize={24}
-                            lineWidth={2}
+                            bulletSize={18}
+                            lineWidth={3}
                         >
-                            <Timeline.Item bullet={<IconGitBranch size={12}/>} title="Идея">
+                            <Timeline.Item title="Идея">
                                 <Text c="dimmed" size="md">
                                     Зарождение идеи в рамках учебной научной деятельности
                                 </Text>
                                 <Text size="md" mt={4}>2020 - 2021</Text>
                             </Timeline.Item>
 
-                            <Timeline.Item bullet={<IconGitCommit size={12}/>} title="Конкурс">
+                            <Timeline.Item title="Конкурс">
                                 <Text c="dimmed" size="md">
                                     Топ-1000 проектов Всероссийского
                                     форума “Сильные
@@ -106,8 +108,7 @@ export function CardsCarousel() {
                                 <Text size="md" mt={4}>2022</Text>
                             </Timeline.Item>
 
-                            <Timeline.Item title="Конкурс"
-                                           bullet={<IconGitPullRequest size={12}/>}
+                            <Timeline.Item title="Грант"
                                            lineVariant="dashed">
                                 <Text c="dimmed" size="md">
                                     Победа в конкурсе
@@ -124,7 +125,7 @@ export function CardsCarousel() {
                                 <Text size="md" mt={4}>2023</Text>
                             </Timeline.Item>
 
-                            <Timeline.Item title="Производство" bullet={<IconMessageDots size={12}/>}>
+                            <Timeline.Item title="Производство">
                                 <Text c="dimmed" size="md">
                                     Оснащение
                                     собственной
