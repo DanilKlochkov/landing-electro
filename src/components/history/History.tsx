@@ -4,9 +4,9 @@ import classes from './History.module.css';
 import {useRef} from "react";
 import Autoplay from "embla-carousel-autoplay";
 
-import carbonUrl from '/Carbonization.png?url';
-import chemistryUrl from '/SoftChemistry.png?url';
-import electroChemistryUrl from '/ElectroChemistry.png?url';
+import carbonUrl from '/Carbonization.webp?url';
+import chemistryUrl from '/SoftChemistry.webp?url';
+import electroChemistryUrl from '/ElectroChemistry.webp?url';
 
 interface CardProps {
     image: string;
@@ -19,10 +19,9 @@ function Card({image, title}: CardProps) {
             <Overlay
                 gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .1) 100%)"
                 opacity={1}
-                zIndex={1}
+                zIndex={0}
             />
             <Paper
-                shadow="md"
                 p="xl"
                 radius="md"
                 style={{backgroundImage: `url(${image})`}}
@@ -63,7 +62,7 @@ export function CardsCarousel() {
         </Carousel.Slide>
     ));
 
-    const autoplay = useRef(Autoplay({delay: 3500}));
+    const autoplay = useRef(Autoplay({delay: 5000}));
 
     return (
         <Container id={"history"} size="lg" className={classes.container} mih={'100vh'}>

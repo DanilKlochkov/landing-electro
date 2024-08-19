@@ -15,11 +15,11 @@ import {
 import classes from './Command.module.css';
 import {useDisclosure, useMediaQuery} from "@mantine/hooks";
 
-import ceoUrl from '/CEO.jpg?url';
-import gorshkov from '/gorshkov.png?url';
-import klochkov from '/Klochkov.png?url';
-import zotov from '/Zotov.png?url';
-import asmolova from '/Asmolova.png?url';
+import ceoUrl from '/CEO.webp?url';
+import gorshkov from '/gorshkov.webp?url';
+import klochkov from '/Klochkov.webp?url';
+import zotov from '/Zotov.webp?url';
+import asmolova from '/Asmolova.webp?url';
 
 export function Command() {
     const theme = useMantineTheme()
@@ -80,12 +80,11 @@ export function Command() {
                                 <Card.Section
                                     h={250}
                                     style={{
-                                        backgroundImage:
-                                            'url(CEO.jpg)',
+                                        backgroundImage: 'url(CEO.webp)',
                                         backgroundSize: 'cover',
                                     }}
                                 />
-                                <Text fz="xs" tt="uppercase" fw={700} c="dimmed">
+                                <Text mt={20} fz="xs" tt="uppercase" fw={700} c="dimmed">
                                     Руководитель проекта, Генеральный директор ООО "Энергозаряд"
                                 </Text>
 
@@ -155,6 +154,7 @@ export function UserInfoIcons({name, role, imageLink}: {
             <Group wrap="nowrap">
                 <Avatar
                     src={imageLink}
+                    alt={name}
                     size={94}
                     radius="md"
                 />

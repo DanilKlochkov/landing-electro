@@ -87,10 +87,10 @@ const MOCKDATA = [
         title: 'Адрес',
         description: <Anchor
             underline="hover"
-            href="http://maps.google.com/?q=%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2,%20%D1%80%D1%8B%D0%BD%D0%BE%D0%BA%20%D0%A1%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9"
+            href="https://www.google.com/maps?q=%D0%A1%D0%B0%D1%80%D0%B0%D1%82%D0%BE%D0%B2,+%D1%83%D0%BB.+%D0%90%D1%82%D0%BA%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F,+66"
             target={"_blank"}
         >
-            844 Morris Park avenue
+            г. Саратов, ул. Аткарская, 66
         </Anchor>,
         icon: IconMapPin
     },
@@ -129,7 +129,7 @@ export function FooterCentered() {
         <div className={classes.footer}>
             <Container className={classes.inner} size="lg">
                 <Flex gap={10} align={"center"}>
-                    <Image src={logoUrl} h={28}/>
+                    <Image src={logoUrl} h={28} alt={"Энергозаряд"}/>
                     <Title className={classes.titleFooter}>Энергозаряд</Title>
                 </Flex>
 

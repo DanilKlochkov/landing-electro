@@ -29,9 +29,8 @@ export function Header() {
         <header className={classes.header}>
             <Container size="lg">
                 <div className={classes.inner}>
-                    {/*<MantineLogo size={28} />*/}
                     <Flex gap={10} align={"center"}>
-                        <Image src={logoUrl} h={28}/>
+                        <Image src={logoUrl} h={28} alt="Энергозаряд"/>
                         <Title className={classes.title}>Энергозаряд</Title>
                     </Flex>
                     <Group gap={5} visibleFrom="sm">
