@@ -9,7 +9,6 @@ import {
     Title,
     useMantineTheme,
     Modal,
-    Mark,
     List
 } from '@mantine/core';
 import classes from './Command.module.css';
