@@ -20,7 +20,7 @@
 
     @media (max-width: $mantine-breakpoint-sm) {
         height: rem(600px);
-        padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+        /*padding-bottom: calc(var(--mantine-spacing-xl) * 3);*/
     }
 }
 

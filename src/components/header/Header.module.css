@@ -20,6 +20,13 @@
     text-transform: uppercase !important;
 }
 
+.title_burger {
+    color: #043873 !important;
+    font-weight: 500 !important;
+    font-size: rem(20px) !important;
+    text-transform: uppercase !important;
+}
+
 .link {
     display: block;
     line-height: 1;
@@ -34,6 +41,16 @@
         color: #043873;
         background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
     }
+}
+
+.link_burger {
+    color: #043873;
+    display: block;
+    line-height: 1;
+    padding: rem(8px) rem(12px);
+    text-decoration: none;
+    font-size: var(--mantine-font-size-lg);
+    font-weight: 500;
 }
 
 .linkLabel {

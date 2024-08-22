@@ -1,9 +1,7 @@
-import {Title, Container, Text, ThemeIcon, rem, Stack, Group, ActionIcon, Image, Flex, Anchor} from '@mantine/core';
+import {Title, Container, Text, ThemeIcon, rem, Stack, Group, Image, Flex, Anchor} from '@mantine/core';
 import classes from './Contacts.module.css';
 import {
-    IconAt, IconBrandTelegram,
-    IconBrandVk,
-    IconBrandYoutube,
+    IconAt,
     IconMapPin,
     IconPhone,
     IconSun
@@ -133,19 +131,7 @@ export function FooterCentered() {
                     <Title className={classes.titleFooter}>Энергозаряд</Title>
                 </Flex>
 
-                <Group className={classes.links}>{items}</Group>
-
-                <Group gap="xs" justify="flex-end" wrap="nowrap">
-                    <ActionIcon size="lg" variant="default" radius="xl">
-                        <IconBrandTelegram style={{width: rem(18), height: rem(18)}} stroke={1.5}/>
-                    </ActionIcon>
-                    <ActionIcon size="lg" variant="default" radius="xl">
-                        <IconBrandYoutube style={{width: rem(18), height: rem(18)}} stroke={1.5}/>
-                    </ActionIcon>
-                    <ActionIcon size="lg" variant="default" radius="xl">
-                        <IconBrandVk style={{width: rem(18), height: rem(18)}} stroke={1.5}/>
-                    </ActionIcon>
-                </Group>
+                <Group className={classes.links} justify="flex-end">{items}</Group>
             </Container>
         </div>
     );
