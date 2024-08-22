@@ -19,7 +19,7 @@
     position: relative;
 
     @media (max-width: $mantine-breakpoint-sm) {
-        height: rem(700px);
+        height: rem(600px);
         padding-bottom: calc(var(--mantine-spacing-xl) * 3);
     }
 }
@@ -46,6 +46,6 @@
 
     @media (max-width: $mantine-breakpoint-sm) {
         max-width: 100% !important;
-        font-size: var(--mantine-font-size-sm) !important;
+        font-size: var(--mantine-font-size-md) !important;
     }
 }

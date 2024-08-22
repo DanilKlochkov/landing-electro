@@ -17,6 +17,7 @@ export function Header() {
     const items = links.map((link) => {
         return (
             <a
+                key={link.link}
                 href={link.link}
                 className={classes.link}
             >

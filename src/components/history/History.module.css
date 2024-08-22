@@ -13,16 +13,20 @@
 .card {
     height: rem(440px);
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
     background-size: cover;
     background-position: center;
 }
 
 .innerCard {
     z-index: 1;
-    position: relative;
+    position: sticky;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        align-items: flex-end;
+    }
 }
 
 .title {
@@ -32,7 +36,6 @@
     color: var(--mantine-color-white) !important;
     line-height: 1.2 !important;
     font-size: rem(32px) !important;
-    margin-top: var(--mantine-spacing-xs) !important;
 
     @media (max-width: $mantine-breakpoint-md) {
         font-weight: 800 !important;
